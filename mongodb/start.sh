@@ -11,6 +11,7 @@ docker stop $name 2> /dev/null
 docker rm $name 2> /dev/null
 
 docker run -d --name $name -p 27017:27017 \
+  -e TZ=Asia/Shanghai \
   -v ${SCRIPTPATH}/_data:/data/db \
   mongo:4.0
 # after startup, connect to it with dbeaver or other client

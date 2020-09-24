@@ -16,6 +16,7 @@ name=gitlab
 docker stop $name
 docker rm $name
 docker run -d --name $name \
+  -e TZ=Asia/Shanghai \
   -v ${SCRIPTPATH}/_data/opt:/var/opt/gitlab \
   -v ${SCRIPTPATH}/_data/etc:/etc/gitlab \
   -v ${SCRIPTPATH}/_data/log:/var/log/gitlab \

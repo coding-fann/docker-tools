@@ -11,6 +11,7 @@ docker stop $name 2> /dev/null
 docker rm $name 2> /dev/null
 
 docker run -d --name $name -p 3306:3306 \
+  -e TZ=Asia/Shanghai \
   -v ${SCRIPTPATH}/_data:/var/lib/mysql \
   -e MYSQL_ROOT_PASSWORD=adminpass \
   mysql:5.7
