@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# Image URL: https://hub.docker.com/_/mongo
+
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 

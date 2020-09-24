@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# Image URL: https://hub.docker.com/r/gitlab/gitlab-ce
+
 # no need to install additional Database, quite convenient
 # First time, it will ask you to reset the password for admin user
 # then you can login with, root/new-password-you-set,

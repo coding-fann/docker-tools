@@ -1,9 +1,11 @@
 #!/bin/bash
 
+# Image URL: https://hub.docker.com/_/mysql
+
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 
-name=mysql2
+name=mysql
 
 docker stop $name 2> /dev/null
 docker rm $name 2> /dev/null

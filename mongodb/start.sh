@@ -1,11 +1,14 @@
 #!/bin/bash
+
+# Image URL: https://hub.docker.com/_/mongo
+
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 
 name=mongo
 
-docker stop $name
-docker rm $name
+docker stop $name 2> /dev/null
+docker rm $name 2> /dev/null
 
 docker run -d --name $name -p 27017:27017 \
   -v ${SCRIPTPATH}/_data:/data/db \
